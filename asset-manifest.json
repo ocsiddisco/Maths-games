@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Maths-games/static/css/main.a598ec90.css",
+    "main.js": "/Maths-games/static/js/main.c6d26a3f.js",
+    "static/js/787.0057b5d3.chunk.js": "/Maths-games/static/js/787.0057b5d3.chunk.js",
+    "static/media/panda.gif": "/Maths-games/static/media/panda.4b6488ace36b0d88cf12.gif",
+    "static/media/Cat.gif": "/Maths-games/static/media/Cat.f6e2987abf0d001dfaf0.gif",
+    "static/media/Pig.gif": "/Maths-games/static/media/Pig.1759cec3baa8003cd6f7.gif",
+    "static/media/Gru.gif": "/Maths-games/static/media/Gru.8c78bbedab0af9446729.gif",
+    "static/media/ComicSansMS3.ttf": "/Maths-games/static/media/ComicSansMS3.3198d266c6629f0b7ce0.ttf",
+    "index.html": "/Maths-games/index.html",
+    "main.a598ec90.css.map": "/Maths-games/static/css/main.a598ec90.css.map",
+    "main.c6d26a3f.js.map": "/Maths-games/static/js/main.c6d26a3f.js.map",
+    "787.0057b5d3.chunk.js.map": "/Maths-games/static/js/787.0057b5d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a598ec90.css",
+    "static/js/main.c6d26a3f.js"
+  ]
+}
