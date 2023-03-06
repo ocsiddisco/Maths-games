@@ -8,7 +8,7 @@ It is making use of React, Context and uses TailwindCSS for the styling.
 
 <p align='center'>
 
-<img src="src/Screenshot/Screenshot.jpg">
+<img src="src/Screenshots/screenshot.jpg">
 
 </p>
 
