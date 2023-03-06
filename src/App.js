@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useContext } from "react";
+import Calcul from "./Components/Calcul";
+import Score from "./Components/Score";
+import Choose from "./Components/Choose";
+import AppContext from "./AppContext";
 
 function App() {
+  const { isActive } = useContext(AppContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app rounded shadow-2xl flex flex-col font-face-gm lg:w-2/5 lg:max-h-[60rem]">
+      <Choose />
+      {!isActive && (
+        <div>
+          <Calcul />
+          <Score />
+        </div>
+      )}
     </div>
   );
 }
