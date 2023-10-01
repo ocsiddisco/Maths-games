@@ -1,10 +1,17 @@
-html, body {
+html  {
   margin: 0;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-  height: 100vh;
-width: 100vw;
+  min-height: 100vh;
+
+}
+
+body {
+  margin:0;
+  min-height: 100vh;
+  background-image: linear-gradient(to right top, #befbff, #abe5ea, #99d0d5, #87bbc0, #76a7ac);
+background-repeat: no-repeat;
 }
 
 

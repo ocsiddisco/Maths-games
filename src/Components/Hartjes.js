@@ -3,7 +3,7 @@ import "animate.css";
 
 export default function Hartjes(props) {
   const [animated, setAnimated] = useState(true);
-  const [a, setA] = useState(0); // Initialize a
+  const [a, setA] = useState(0);
 
   const [b, setB] = useState("");
 
@@ -25,9 +25,11 @@ export default function Hartjes(props) {
     }
   };
 
-  function handleClick() {
+  const handleSubmit = () => {
+    checkAnswer();
+
     setB("");
-  }
+  };
 
   const handleInputChange = (event) => {
     setB(event.target.value);
@@ -35,10 +37,10 @@ export default function Hartjes(props) {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      checkAnswer();
-      setB("");
+      handleSubmit();
     }
   };
+
   return (
     <div className="flex flex-col items-center">
       <div className=" relative ">
@@ -59,7 +61,7 @@ export default function Hartjes(props) {
           }
         >
           <div className="flex flex-col  justify-center text-xl">
-            <span className="flex flex-row justify-center text-xl">
+            <div className="flex flex-row justify-center text-xl">
               <div className=" ml-4 mr-4">{a}</div> +
               <input
                 className=" ml-4 mr-4 w-7 rounded text-center"
@@ -68,7 +70,7 @@ export default function Hartjes(props) {
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
               />
-            </span>
+            </div>
             <div className="flex flex-row justify-center mt-4">
               <span className="pr-2">=</span> <span className="pl-2">10</span>
             </div>
@@ -79,10 +81,7 @@ export default function Hartjes(props) {
       <div className="mt-6">
         <button
           className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-4 m-6 w-64 border border-gray-400 rounded shadow tracking-widest"
-          onClick={(e) => {
-            checkAnswer();
-            handleClick();
-          }}
+          onClick={handleSubmit}
         >
           Controleer je antwoord
         </button>

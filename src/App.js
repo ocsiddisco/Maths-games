@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="app rounded shadow-2xl flex flex-col text-center h-full">
+    <div className="app rounded shadow-2xl flex flex-col text-center">
       <Header handleTerugNaarMenu={handleTerugNaarMenu} state={state} />
 
       {state === "" && (
@@ -58,30 +58,19 @@ function App() {
           handlePickedHartjes={handlePickedHartjes}
         />
       )}
-      {state === "plussommen" && (
-        <div>
-          <Calcul
-            incrementCount={incrementCount}
-            operator={operator}
-            numb1={numb1}
-            numb2={numb2}
-            pickNumbers={pickNumbers}
-          />
-          <Score count={count} />
-        </div>
-      )}
-      {state === "minssommen" && (
-        <div>
-          <Calcul
-            incrementCount={incrementCount}
-            operator={operator}
-            numb1={numb1}
-            numb2={numb2}
-            pickNumbers={pickNumbers}
-          />
-          <Score count={count} />
-        </div>
-      )}
+      {state === "plussommen" ||
+        (state === "minssommen" && (
+          <div>
+            <Calcul
+              incrementCount={incrementCount}
+              operator={operator}
+              numb1={numb1}
+              numb2={numb2}
+              pickNumbers={pickNumbers}
+            />
+            <Score count={count} />
+          </div>
+        ))}
       {state === "hartjes" && (
         <div>
           <Hartjes incrementCount={incrementCount} />

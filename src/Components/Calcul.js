@@ -29,13 +29,14 @@ export default function Calcul(props) {
     }
   }
 
-  function handleClick() {
+  const handleSubmit = () => {
+    checkAnswer();
     setResult("");
-  }
+  };
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      checkAnswer();
-      setResult("");
+      handleSubmit();
     }
   };
 
@@ -56,10 +57,7 @@ export default function Calcul(props) {
       <div className="mt-6">
         <button
           className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-4 m-6 w-64 border border-gray-400 rounded shadow tracking-widest"
-          onClick={(e) => {
-            checkAnswer();
-            handleClick();
-          }}
+          onClick={handleSubmit}
         >
           Controleer je antwoord
         </button>

@@ -1,14 +1,12 @@
 .app {
-    background-image: linear-gradient(to right top, #befbff, #abe5ea, #99d0d5, #87bbc0, #76a7ac);
-  background-repeat: no-repeat;
   width: 100%;
-  height:100%;
+  min-height:100vh;
 }
 
 #root{
   display: flex;
   justify-content: center;
-  height: 100%;
+  /* height: 100%; */
 }
 
 
